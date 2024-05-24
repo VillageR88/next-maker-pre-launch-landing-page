@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  @apply shadow-[0_0_0_30px_white_inset] dark:shadow-[0_0_0_30px_#1c1c1c_inset];
+  -webkit-text-fill-color: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-text-size-adjust: none;
+}
+:is(.dark) input:-webkit-autofill {
+  -webkit-text-fill-color: white;
+}
+
+h1 {
+  @apply text-[32px] font-bold tracking-[-1px];
+}
+label {
+  @apply text-[16px] leading-[150%];
+}
+
+input,
+textarea,
+.labelSpan {
+  @apply text-[18px] leading-[150%];
+}
+
+input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  background-clip: content-box;
+  border: 2px solid #86a2a5;
+  border-radius: 50%;
+}
+
+input[type='radio']:checked {
+  background-color: #0c7d69;
+  border: 2px solid #0c7d69;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 4px;
+  background-clip: content-box;
+  border: 2px solid #86a2a5;
+  border-radius: 2px;
+}
+
+input[type='checkbox']:checked {
+  position: absolute;
+  border-color: #0c7d69;
+}
+
+.checkboxWrapper:has(input[type='checkbox']) .checkboxImage {
+  @apply hidden;
+}
+.checkboxWrapper:has(input[type='checkbox']:checked) .checkboxImage {
+  @apply block;
+}
+
+.groupParent:has(input:checked:not(:hover)) {
+  @apply bg-[#E0F1E8] text-[#0C7D69] outline-[#0C7D69];
+}
+.groupParent:has(input:hover) {
+  @apply text-[#0C7D69] outline-[#0C7D69];
+}
