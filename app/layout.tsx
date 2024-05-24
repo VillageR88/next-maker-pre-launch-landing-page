@@ -1,11 +1,11 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Karla } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 
-const karla = Karla({
+const manrope = Manrope({
   display: 'swap',
   weight: ['200', '300', '400', '500', '600', '700', '800'],
-  variable: '--font-karla',
+  variable: '--font-manrope',
   subsets: ['latin-ext'],
 });
 
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
         <meta property="og:image" content={undefined} />
       </head>
-      <body className={`${karla.variable} bg-[#E0F1E8]`}>{children}</body>
+      <body className={`${manrope.variable} bg-[#080C20]`}>{children}</body>
     </html>
   );
 }
