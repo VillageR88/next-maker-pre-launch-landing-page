@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:image" content={undefined} />
       </head>
       <body
-        className={`${manrope.variable} flex min-h-dvh flex-col items-center justify-start bg-[#080C20] pt-[81px] font-manrope sm:min-h-screen`}
+        className={`${manrope.variable} flex min-h-dvh flex-col items-center justify-start overflow-x-hidden bg-[#080C20] pt-[81px] font-manrope sm:min-h-screen`}
       >
         <div className="absolute top-0 -z-10 mt-[213px] h-[378px] w-[544px]">
           <Image fill src={heroSquiggle as string} alt="background" priority />
