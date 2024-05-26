@@ -6,6 +6,20 @@ import { CreateInvoiceContactForm } from '@/app/_lib/functionsServer';
 import Loader from '@/app/components/Loader';
 import { useEffect, useState } from 'react';
 
+const SubmitButton = () => {
+  const { pending } = useFormStatus();
+
+  return (
+    <button
+      disabled={pending}
+      className="flex h-[48px] w-[140px] items-center justify-center rounded-[24px] border-2 border-[#3EE9E5] bg-[#3EE9E5] stroke-[#093F68] text-[15px] font-extrabold text-[#093F68] shadow-none hover:bg-[#080C20] hover:stroke-[#FFFFFF] hover:text-[#FFFFFF] hover:transition-colors active:transition-none "
+      type="submit"
+    >
+      {pending ? <Loader pending={pending} /> : <span>Get notified</span>}
+    </button>
+  );
+};
+
 export default function Footer() {
   const [state, action] = useFormState<{ message: Message; number: number }, FormData>(CreateInvoiceContactForm, {
     message: Message.valid,
@@ -18,19 +32,6 @@ export default function Footer() {
       setValue('');
     }
   }, [state]);
-  const SubmitButton = () => {
-    const { pending } = useFormStatus();
-
-    return (
-      <button
-        disabled={pending}
-        className="flex h-[48px] w-[140px] items-center justify-center rounded-[24px] border-2 border-[#3EE9E5] bg-[#3EE9E5] stroke-[#093F68] text-[15px] font-extrabold text-[#093F68] shadow-none transition-colors hover:bg-[#080C20] hover:stroke-[#FFFFFF] hover:text-[#FFFFFF] "
-        type="submit"
-      >
-        {pending ? <Loader pending={pending} /> : <span>Get notified</span>}
-      </button>
-    );
-  };
 
   return (
     <footer className="mr-[223px] mt-[151px] flex h-[228px] w-[1665px] justify-center bg-[url('../public/assets/images/bg-footer-squiggle.svg')] text-center text-[#FFFFFF]">
