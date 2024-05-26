@@ -17,7 +17,7 @@ export default function Footer() {
     if (state.message === Message.success) {
       setValue('');
     }
-  }, [state.message]);
+  }, [state]);
   const SubmitButton = () => {
     const { pending } = useFormStatus();
 
