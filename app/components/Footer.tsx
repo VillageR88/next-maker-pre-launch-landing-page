@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="flex flex-col gap-[4px]">
             <input
               placeholder="Email address"
-              className={`h-[48px] w-[320px] rounded-[24px] bg-[#093F68] px-[18px] text-[15px] font-extrabold text-[#FFFFFF] outline-none outline-offset-0 ${state.message === Message.valid || state.message === Message.success || state.number === trackedNumber ? 'focus:outline-[#3EE9E5]' : ' outline-[#FF2965]'}`}
+              className={`h-[48px] w-[320px] rounded-[24px] border-2 bg-[#093F68] px-[18px] text-[15px] font-extrabold text-[#FFFFFF] outline-none outline-offset-0 ${state.message === Message.valid || state.message === Message.success || state.number === trackedNumber ? 'border-transparent focus:border-[#3EE9E5]' : ' border-[#FF2965]'}`}
               id="email"
               type="text"
               name="email"
