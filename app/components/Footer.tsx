@@ -12,7 +12,7 @@ const SubmitButton = () => {
   return (
     <button
       disabled={pending}
-      className="flex h-[48px] w-[140px] items-center justify-center rounded-[24px] border-2 border-[#3EE9E5] bg-[#3EE9E5] stroke-[#093F68] text-[15px] font-extrabold text-[#093F68] shadow-none hover:bg-[#080C20] hover:stroke-[#FFFFFF] hover:text-[#FFFFFF] hover:transition-colors active:transition-none "
+      className="flex h-[48px] w-[140px] items-center justify-center rounded-[24px] border-2 border-[#3EE9E5] bg-[#3EE9E5] stroke-[#093F68] text-[15px] font-extrabold text-[#093F68] shadow-none transition-colors hover:bg-[#080C20] hover:stroke-[#FFFFFF] hover:text-[#FFFFFF]"
       type="submit"
     >
       {pending ? <Loader pending={pending} /> : <span>Get notified</span>}
