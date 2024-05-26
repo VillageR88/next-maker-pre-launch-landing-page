@@ -1,9 +1,23 @@
-import { useFormState } from 'react-dom';
+import { useFormState, useFormStatus } from 'react-dom';
 import { Message } from '@/app/_lib/interfaces';
 import { CreateInvoiceContactForm } from '@/app/_lib/functionsServer';
+import Loader from '@/app/components/Loader';
 
 export default function Footer() {
   const [state, action] = useFormState<Message, FormData>(CreateInvoiceContactForm, Message.valid);
+  const SubmitButton = () => {
+    const { pending } = useFormStatus();
+
+    return (
+      <button
+        disabled={pending}
+        className="flex h-[48px] w-[140px] items-center justify-center rounded-[24px] bg-[#3EE9E5] text-[15px] font-extrabold text-[#093F68]"
+        type="submit"
+      >
+        {pending ? <Loader pending={pending} /> : <span>Get notified</span>}
+      </button>
+    );
+  };
 
   return (
     <footer className="mr-[223px] mt-[151px] flex h-[228px] w-[1665px] justify-center bg-[url('../public/assets/images/bg-footer-squiggle.svg')] text-center text-[#FFFFFF]">
@@ -29,12 +43,7 @@ export default function Footer() {
               {state}
             </span>
           </div>
-          <button
-            className="h-[48px] w-[140px] rounded-[24px] bg-[#3EE9E5] text-[15px] font-extrabold text-[#093F68]"
-            type="submit"
-          >
-            Get notified
-          </button>
+          <SubmitButton />
         </div>
       </form>
     </footer>
