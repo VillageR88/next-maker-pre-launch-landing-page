@@ -41,7 +41,7 @@ export default function MainRow3() {
     },
   };
   return (
-    <div className="flex flex-col items-center gap-[72px] text-center">
+    <div className="mt-[202px] flex flex-col items-center gap-[72px] text-center">
       <section className="flex max-w-[540px] flex-col gap-[24px]">
         <h2 className="text-[#FFFFFF]">Our pricing plans</h2>
         <p className="text-[#777F98]">

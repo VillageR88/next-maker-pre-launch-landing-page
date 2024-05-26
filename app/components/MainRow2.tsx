@@ -53,7 +53,7 @@ export default function MainRow2() {
   };
 
   return (
-    <ul className="flex h-[383px] w-full max-w-[1110px] gap-[30px] text-white">
+    <ul className="mt-[202px] flex h-[383px] w-full max-w-[1110px] gap-[30px] text-white">
       {listItems.map((item, index) => (
         <MiddleBlock
           classExtension={index % 2 ? 'self-end' : 'sel-start'}
