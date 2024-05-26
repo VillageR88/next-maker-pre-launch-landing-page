@@ -4,7 +4,7 @@ import { useFormState, useFormStatus } from 'react-dom';
 import { Message } from '@/app/_lib/interfaces';
 import { CreateInvoiceContactForm } from '@/app/_lib/functionsServer';
 import Loader from '@/app/components/Loader';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Footer() {
   const [state, action] = useFormState<{ message: Message; number: number }, FormData>(CreateInvoiceContactForm, {
@@ -13,6 +13,11 @@ export default function Footer() {
   });
   const [value, setValue] = useState<string>('');
   const [trackedNumber, setTrackedNumber] = useState<number>(0);
+  useEffect(() => {
+    if (state.message === Message.success) {
+      setValue('');
+    }
+  }, [state.message]);
   const SubmitButton = () => {
     const { pending } = useFormStatus();
 
