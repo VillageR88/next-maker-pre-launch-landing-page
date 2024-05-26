@@ -1,10 +1,18 @@
+'use client';
+
 import { useFormState, useFormStatus } from 'react-dom';
 import { Message } from '@/app/_lib/interfaces';
 import { CreateInvoiceContactForm } from '@/app/_lib/functionsServer';
 import Loader from '@/app/components/Loader';
+import { useState } from 'react';
 
 export default function Footer() {
-  const [state, action] = useFormState<Message, FormData>(CreateInvoiceContactForm, Message.valid);
+  const [state, action] = useFormState<{ message: Message; number: number }, FormData>(CreateInvoiceContactForm, {
+    message: Message.valid,
+    number: 0,
+  });
+  const [value, setValue] = useState<string>('');
+  const [trackedNumber, setTrackedNumber] = useState<number>(0);
   const SubmitButton = () => {
     const { pending } = useFormStatus();
 
@@ -30,17 +38,21 @@ export default function Footer() {
           <div className="flex flex-col gap-[4px]">
             <input
               placeholder="Email address"
-              className={`h-[48px] w-[320px] rounded-[24px] bg-[#093F68] px-[18px] text-[15px] font-extrabold text-[#FFFFFF] outline-none outline-offset-0 ${state === Message.valid || state === Message.success ? 'focus:outline-[#3EE9E5]' : ' outline-[#FF2965]'}`}
+              className={`h-[48px] w-[320px] rounded-[24px] bg-[#093F68] px-[18px] text-[15px] font-extrabold text-[#FFFFFF] outline-none outline-offset-0 ${state.message === Message.valid || state.message === Message.success || state.number === trackedNumber ? 'focus:outline-[#3EE9E5]' : ' outline-[#FF2965]'}`}
               id="email"
               type="text"
               name="email"
               autoComplete="email"
-              formNoValidate={false}
+              value={value}
+              onChange={(e) => {
+                setValue(e.target.value);
+                setTrackedNumber(state.number);
+              }}
             />
             <span
-              className={`ml-[18px] self-start text-[12px] leading-[25px] ${state === Message.success ? 'text-green-400' : 'text-[#FF2965]'}`}
+              className={`z-10 ml-[18px] self-start text-[12px] leading-[25px] ${state.message === Message.success ? 'text-green-400' : 'text-[#FF2965]'}`}
             >
-              {state}
+              {state.number !== trackedNumber ? state.message : ''}
             </span>
           </div>
           <SubmitButton />
