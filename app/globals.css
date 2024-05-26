@@ -32,15 +32,16 @@ input[type='radio'] {
 }
 
 h1 {
-  @apply text-[48px] font-extrabold text-center leading-[56px];
+  @apply text-center text-[32px] font-extrabold leading-[40px] xl:text-[48px] xl:leading-[56px];
 }
 
-h2, label {
-  @apply text-[32px] font-extrabold;
+h3, label {
+  @apply text-[24px] font-extrabold xl:text-[32px];
 }
 
-h3 {
-  @apply text-[18px] font-extrabold text-left;
+h2,
+h4 {
+  @apply text-left text-[18px] font-extrabold;
 }
 
 p {

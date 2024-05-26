@@ -41,15 +41,15 @@ export default function MainRow3() {
     },
   };
   return (
-    <div className="mt-[202px] flex flex-col items-center gap-[72px] text-center">
-      <section className="flex max-w-[540px] flex-col gap-[24px]">
-        <h2 className="text-[#FFFFFF]">Our pricing plans</h2>
+    <div className="mt-[141px] flex flex-col items-center gap-[72px] text-center xl:mt-[202px]">
+      <section className="flex max-w-[540px] flex-col gap-[27px] xl:gap-[24px]">
+        <h3 className="text-[#FFFFFF]">Our pricing plans</h3>
         <p className="text-[#777F98]">
           We only make money when our creators make money. Our plans are always affordable, and it’s completely free to
           get started.
         </p>
       </section>
-      <div className="flex flex-row items-center gap-[30px]">
+      <div className="flex flex-col items-center gap-[65px] xl:flex-row xl:gap-[30px]">
         {Object.values(itemList).map((item, index) => (
           <div key={index} className="flex flex-col">
             <Image className={`absolute z-10 ${item.imageOffset}`} src={item.image} alt="decoration" />
@@ -57,7 +57,7 @@ export default function MainRow3() {
               className={`${[item.backgroundColor, item.height, item.textColor, item.padding].map((item) => item).join(' ')} flex w-[445px] flex-col gap-[24px] rounded-[8px] text-start`}
             >
               <section className="flex flex-col gap-[19px]">
-                <h3>{item.title}</h3>
+                <h4>{item.title}</h4>
                 <p className="opacity-60">{item.description}</p>
               </section>
               <section className="flex flex-col gap-[19px]">

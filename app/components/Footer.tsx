@@ -34,9 +34,9 @@ export default function Footer() {
   }, [state]);
 
   return (
-    <footer className="mr-[223px] mt-[151px] flex h-[228px] w-[1665px] justify-center bg-[url('../public/assets/images/bg-footer-squiggle.svg')] text-center text-[#FFFFFF]">
+    <footer className="mr-[230px] mt-[119px] flex h-[140px] w-[1022px] justify-center bg-[url('../public/assets/images/bg-footer-squiggle.svg')] bg-cover text-center text-[#FFFFFF] xl:mr-[223px] xl:mt-[151px] xl:h-[228px] xl:w-[1665px]">
       <form
-        className="ml-[223px] mt-[52px] flex h-[134px] w-full max-w-[730px] flex-col items-center gap-[42px]"
+        className="ml-[230px] mt-[16px] flex h-[134px] w-full max-w-[730px] flex-col items-center gap-[42px] xl:ml-[223px] xl:mt-[52px]"
         action={action}
       >
         <label htmlFor="email">Get notified when we launch</label>
