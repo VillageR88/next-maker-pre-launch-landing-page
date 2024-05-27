@@ -40,7 +40,7 @@ export default function Footer() {
         action={action}
       >
         <label htmlFor="email">Get notified when we launch</label>
-        <div className="flex w-full flex-col items-center gap-[16px] sm:w-fit sm:flex-row">
+        <div className="flex w-full flex-col items-start gap-[16px] sm:w-fit sm:flex-row">
           <div className="flex w-full flex-col gap-[4px] sm:w-fit">
             <input
               placeholder="Email address"
