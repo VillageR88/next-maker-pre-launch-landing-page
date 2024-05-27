@@ -56,7 +56,7 @@ export default function Footer() {
               }}
             />
             <span
-              className={`z-10 ml-[18px] self-start text-[12px] leading-[25px] ${state.message === Message.success ? 'text-green-400' : 'text-[#FF2965]'}`}
+              className={`-z-10 ml-[18px] self-start text-[12px] leading-[25px] ${state.message === Message.success ? 'text-green-400' : 'text-[#FF2965]'}`}
             >
               {state.number !== trackedNumber ? state.message : ''}
             </span>
