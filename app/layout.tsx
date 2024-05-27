@@ -1,8 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Manrope } from 'next/font/google';
-import Image from 'next/image';
-import heroSquiggle from '@/public/assets/images/bg-hero-squiggle.svg';
 
 const manrope = Manrope({
   display: 'swap',
@@ -26,12 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
         <meta property="og:image" content={undefined} />
       </head>
-      <body className={`${manrope.variable} bg-[#080C20]`}>
-        <div className="absolute top-0 -z-10 mt-[194px] hidden h-[268px] w-[386px] md:block xl:mt-[213px] xl:h-[378px] xl:w-[544px]">
-          <Image fill src={heroSquiggle as string} alt="background" priority />
-        </div>
-        {children}
-      </body>
+      <body className={`${manrope.variable} bg-[#080C20]`}>{children}</body>
     </html>
   );
 }

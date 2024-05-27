@@ -6,7 +6,7 @@ import imageScroll from '@/public/assets/images/icon-scroll.svg';
 
 export default function MainRow1() {
   return (
-    <div className="flex justify-center md:h-[356px] md:w-[1108px] xl:h-[459px] xl:w-[1553px]">
+    <div className="flex w-full justify-center md:h-[356px] md:w-[1108px] xl:h-[459px] xl:w-[1553px]">
       <Image
         className="hidden h-[354px] w-[313px] md:block xl:h-[459px] xl:w-[408px]"
         width={408}
@@ -15,7 +15,7 @@ export default function MainRow1() {
         alt="image of people"
         priority
       />
-      <div className="flex flex-col items-center gap-[47px]">
+      <div className="flex w-full flex-col items-center gap-[47px]">
         <Image
           width={410}
           height={233}
@@ -23,8 +23,8 @@ export default function MainRow1() {
           src={imageHeroMobile}
           alt="image of people"
         />
-        <div className="flex h-[254px] flex-col items-center px-[10px] text-white xl:h-[318px] xl:min-w-[730px] xl:pl-0 xl:pr-[19px]">
-          <h1 className="mt-[51px] whitespace-pre xl:mt-[71px]">
+        <div className="flex w-full max-w-[410px] flex-col items-center px-[24px] text-white sm:h-[254px] xl:h-[318px] xl:min-w-[730px] xl:pl-0 xl:pr-[19px]">
+          <h1 className="mt-[51px] w-full sm:whitespace-pre xl:mt-[71px]">
             <span>{'Get paid for the work\n'}</span>
             <span>
               you <span className="text-[#3EE9E5]">love</span> to do.
