@@ -12,7 +12,7 @@ const config: Config = {
         tablet: '700px',
       },
       fontFamily: {
-        karla: ['var(--font-karla)'],
+        manrope: ['var(--font-manrope)'],
       },
       colors: {
         gray1: '#121212',
