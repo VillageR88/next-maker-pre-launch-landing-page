@@ -41,7 +41,7 @@ export default function MainRow3() {
     },
   };
   return (
-    <div className="mt-[141px] flex w-full flex-col items-center gap-[72px] px-[24px] text-center sm:px-0 xl:mt-[202px]">
+    <div className="mt-[141px] flex w-full flex-col items-center gap-[72px] px-[34px] text-center sm:px-0 xl:mt-[202px]">
       <section className="flex max-w-[327px] flex-col gap-[27px] md:max-w-[540px] xl:gap-[24px]">
         <h3 className="text-[#FFFFFF]">Our pricing plans</h3>
         <p className="text-[#777F98]">
