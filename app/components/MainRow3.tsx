@@ -13,11 +13,11 @@ export default function MainRow3() {
       features: ['Unlimited products', 'Basic analytics', 'Limited marketplace exposure', '10% fee per transaction'],
       backgroundColor: 'bg-[#093F68]',
       textColor: 'text-[#FFFFFF]',
-      height: 'h-[425px]',
+      height: 'sm:h-[425px]',
       imageOffset: 'ml-[38px] mt-[-22px]',
       checkColor: 'fill-[#3EE9E5]',
       monthly: false,
-      padding: 'px-[38px] pb-[48px] pt-[49px]',
+      padding: 'px-[38px] sm:pb-[48px] pt-[49px] pb-[32px]',
     },
 
     paid: {
@@ -33,15 +33,15 @@ export default function MainRow3() {
       ],
       backgroundColor: 'bg-[#3EE9E5]',
       textColor: 'text-[#080C20]',
-      height: 'h-[449px]',
+      height: 'sm:h-[449px]',
       imageOffset: 'ml-[37px] mt-[-34px]',
       checkColor: 'fill-[#093F68]',
       monthly: true,
-      padding: 'px-[38px] pb-[60px] pt-[61px]',
+      padding: 'px-[38px] sm:pb-[60px] pb-[32px] pt-[61px]',
     },
   };
   return (
-    <div className="mt-[141px] flex flex-col items-center gap-[72px] text-center xl:mt-[202px]">
+    <div className="mt-[141px] flex w-full flex-col items-center gap-[72px] px-[24px] text-center sm:px-0 xl:mt-[202px]">
       <section className="flex max-w-[327px] flex-col gap-[27px] md:max-w-[540px] xl:gap-[24px]">
         <h3 className="text-[#FFFFFF]">Our pricing plans</h3>
         <p className="text-[#777F98]">
@@ -49,19 +49,19 @@ export default function MainRow3() {
           get started.
         </p>
       </section>
-      <div className="flex flex-col items-center gap-[65px] xl:flex-row xl:gap-[30px]">
+      <div className="flex w-full flex-col items-center gap-[65px] sm:w-fit xl:flex-row xl:gap-[30px]">
         {Object.values(itemList).map((item, index) => (
-          <div key={index} className="flex flex-col">
+          <div key={index} className="flex w-full flex-col">
             <Image className={`absolute z-10 ${item.imageOffset}`} src={item.image} alt="decoration" />
             <div
-              className={`${[item.backgroundColor, item.height, item.textColor, item.padding].map((item) => item).join(' ')} flex w-[445px] flex-col gap-[24px] rounded-[8px] text-start`}
+              className={`${[item.backgroundColor, item.height, item.textColor, item.padding].map((item) => item).join(' ')} flex w-full flex-col gap-[24px] rounded-[8px] text-start sm:w-[445px]`}
             >
-              <section className="flex flex-col gap-[19px]">
+              <section className="flex w-full flex-col gap-[19px]">
                 <h4>{item.title}</h4>
                 <p className="opacity-60">{item.description}</p>
               </section>
-              <section className="flex flex-col gap-[19px]">
-                <div className="flex items-center gap-[7px]">
+              <section className="flex w-full flex-col gap-[19px]">
+                <div className="flex w-full flex-wrap items-center gap-[7px]">
                   <span className="text-[40px] font-extrabold">{item.price}</span>
                   {item.monthly && <span className="text-[15px] font-medium opacity-60">/ month</span>}
                 </div>

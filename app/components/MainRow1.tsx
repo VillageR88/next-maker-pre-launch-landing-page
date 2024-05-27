@@ -24,7 +24,7 @@ export default function MainRow1() {
           alt="image of people"
         />
         <div className="flex w-full max-w-[410px] flex-col items-center px-[24px] text-white sm:h-[254px] xl:h-[318px] xl:min-w-[730px] xl:pl-0 xl:pr-[19px]">
-          <h1 className="mt-[51px] w-full sm:whitespace-pre xl:mt-[71px]">
+          <h1 className="mt-[10px] w-full sm:mt-[51px] sm:whitespace-pre xl:mt-[71px]">
             <span>{'Get paid for the work\n'}</span>
             <span>
               you <span className="text-[#3EE9E5]">love</span> to do.

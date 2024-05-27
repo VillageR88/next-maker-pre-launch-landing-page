@@ -61,7 +61,7 @@ export default function MainRow2() {
   };
 
   return (
-    <ul className="mt-[110px] flex w-full max-w-[573px] flex-col items-center gap-[56px] text-white sm:gap-[40px] md:h-[614px] xl:mt-[202px] xl:h-[383px] xl:max-w-[1110px] xl:flex-row xl:gap-[30px]">
+    <ul className="mt-[144px] flex w-full max-w-[573px] flex-col items-center gap-[56px] text-white sm:mt-[110px] sm:gap-[40px] md:h-[614px] xl:mt-[202px] xl:h-[383px] xl:max-w-[1110px] xl:flex-row xl:gap-[30px]">
       {listItems.map((item, index) => (
         <MiddleBlock
           classExtension={index % 2 ? 'xl:self-end md:self-start ' : 'xl:self-start md:self-end'}

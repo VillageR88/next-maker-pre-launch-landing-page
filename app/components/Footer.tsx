@@ -34,9 +34,9 @@ export default function Footer() {
   }, [state]);
 
   return (
-    <footer className="mt-[119px] flex h-[140px] w-full justify-center bg-[url('../public/assets/images/bg-footer-squiggle.svg')] bg-cover bg-center text-center text-[#FFFFFF] sm:mr-[230px] sm:w-[1022px] xl:mr-[223px] xl:mt-[151px] xl:h-[228px] xl:w-[1665px]">
+    <footer className="mt-[144px] flex h-[140px] w-full justify-center bg-[url('../public/assets/images/bg-footer-squiggle.svg')] bg-cover bg-center text-center text-[#FFFFFF] sm:mr-[230px] sm:mt-[119px] sm:w-[1022px] xl:mr-[223px] xl:mt-[151px] xl:h-[228px] xl:w-[1665px]">
       <form
-        className="mt-[16px] flex h-[219px] w-full max-w-[450px] flex-col items-center gap-[42px] sm:ml-[230px] md:h-[134px] md:max-w-[730px]  xl:ml-[223px] xl:mt-[52px]"
+        className="flex h-[219px] w-full max-w-[450px] flex-col items-center gap-[42px] px-[24px] sm:ml-[230px] sm:mt-[16px] md:h-[134px] md:max-w-[730px]  xl:ml-[223px] xl:mt-[52px]"
         action={action}
       >
         <label htmlFor="email">Get notified when we launch</label>
