@@ -6,7 +6,7 @@ import imageScroll from '@/public/assets/images/icon-scroll.svg';
 
 export default function MainRow1() {
   return (
-    <div className="flex w-[1108px] justify-center md:h-[356px] xl:h-[459px] xl:w-[1553px]">
+    <div className="flex justify-center md:h-[356px] md:w-[1108px] xl:h-[459px] xl:w-[1553px]">
       <Image
         className="hidden h-[354px] w-[313px] md:block xl:h-[459px] xl:w-[408px]"
         width={408}
@@ -19,11 +19,11 @@ export default function MainRow1() {
         <Image
           width={410}
           height={233}
-          className="block h-[233px] w-[410px] md:hidden"
+          className="block h-[233px] min-w-[410px] md:hidden"
           src={imageHeroMobile}
           alt="image of people"
         />
-        <div className="flex h-[254px] min-w-[457px] flex-col items-center px-[10px] text-white xl:h-[318px] xl:min-w-[730px] xl:pl-0 xl:pr-[19px]">
+        <div className="flex h-[254px] flex-col items-center px-[10px] text-white xl:h-[318px] xl:min-w-[730px] xl:pl-0 xl:pr-[19px]">
           <h1 className="mt-[51px] whitespace-pre xl:mt-[71px]">
             <span>{'Get paid for the work\n'}</span>
             <span>

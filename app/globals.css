@@ -35,7 +35,8 @@ h1 {
   @apply text-center text-[32px] font-extrabold leading-[40px] xl:text-[48px] xl:leading-[56px];
 }
 
-h3, label {
+h3,
+label {
   @apply text-[24px] font-extrabold xl:text-[32px];
 }
 

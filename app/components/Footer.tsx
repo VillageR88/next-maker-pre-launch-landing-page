@@ -12,7 +12,7 @@ const SubmitButton = () => {
   return (
     <button
       disabled={pending}
-      className="flex h-[48px] w-[140px] items-center justify-center rounded-[24px] border-2 border-[#3EE9E5] bg-[#3EE9E5] stroke-[#093F68] text-[15px] font-extrabold text-[#093F68] shadow-none transition-colors hover:bg-[#080C20] hover:stroke-[#FFFFFF] hover:text-[#FFFFFF]"
+      className="flex h-[48px] w-full items-center justify-center rounded-[24px] border-2 border-[#3EE9E5] bg-[#3EE9E5] stroke-[#093F68] text-[15px] font-extrabold text-[#093F68] shadow-none transition-colors hover:bg-[#080C20] hover:stroke-[#FFFFFF] hover:text-[#FFFFFF] sm:w-[140px]"
       type="submit"
     >
       {pending ? <Loader pending={pending} /> : <span>Get notified</span>}
@@ -34,17 +34,17 @@ export default function Footer() {
   }, [state]);
 
   return (
-    <footer className="mr-[230px] mt-[119px] flex h-[140px] w-[1022px] justify-center bg-[url('../public/assets/images/bg-footer-squiggle.svg')] bg-cover text-center text-[#FFFFFF] xl:mr-[223px] xl:mt-[151px] xl:h-[228px] xl:w-[1665px]">
+    <footer className="mt-[119px] flex h-[140px] w-full justify-center bg-[url('../public/assets/images/bg-footer-squiggle.svg')] bg-cover bg-center text-center text-[#FFFFFF] sm:mr-[230px] sm:w-[1022px] xl:mr-[223px] xl:mt-[151px] xl:h-[228px] xl:w-[1665px]">
       <form
-        className="ml-[230px] mt-[16px] flex h-[134px] w-full max-w-[730px] flex-col items-center gap-[42px] xl:ml-[223px] xl:mt-[52px]"
+        className="mt-[16px] flex h-[219px] w-full max-w-[450px] flex-col items-center gap-[42px] sm:ml-[230px] md:h-[134px] md:max-w-[730px]  xl:ml-[223px] xl:mt-[52px]"
         action={action}
       >
         <label htmlFor="email">Get notified when we launch</label>
-        <div className="flex gap-[16px]">
-          <div className="flex flex-col gap-[4px]">
+        <div className="flex w-full flex-col items-center gap-[16px] sm:w-fit sm:flex-row">
+          <div className="flex w-full flex-col gap-[4px] sm:w-fit">
             <input
               placeholder="Email address"
-              className={`h-[48px] w-[320px] rounded-[24px] border-2 bg-[#093F68] px-[18px] text-[15px] font-extrabold text-[#FFFFFF] outline-none outline-offset-0 ${state.message === Message.valid || state.message === Message.success || state.number === trackedNumber ? 'border-transparent focus:border-[#3EE9E5]' : ' border-[#FF2965]'}`}
+              className={`h-[48px] w-full rounded-[24px] border-2 bg-[#093F68] px-[18px] text-[15px] font-extrabold text-[#FFFFFF] outline-none outline-offset-0 sm:w-[320px] ${state.message === Message.valid || state.message === Message.success || state.number === trackedNumber ? 'border-transparent focus:border-[#3EE9E5]' : ' border-[#FF2965]'}`}
               id="email"
               type="text"
               name="email"
