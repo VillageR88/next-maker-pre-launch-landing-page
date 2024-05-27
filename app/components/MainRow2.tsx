@@ -47,12 +47,12 @@ export default function MainRow2() {
   }) => {
     return (
       <li
-        className={`${classExtension} flex h-[124px] w-[515px] flex-row gap-[48px] xl:h-[335px] xl:w-[255px] xl:flex-col`}
+        className={`${classExtension} flex w-[515px] flex-col items-center gap-[48px] md:h-[124px] md:flex-row md:items-start xl:h-[335px] xl:w-[255px] xl:flex-col`}
       >
         <div className="flex h-[124px] w-[120px] items-center justify-center rounded-[45px] bg-[#093F68] xl:h-[164px] xl:w-[160px]">
           <Image className={imageParams} src={src} alt={title} />
         </div>
-        <section className="flex max-w-[340px] flex-col gap-[23px] xl:max-w-[255px]">
+        <section className="flex max-w-[340px] flex-col gap-[23px] text-center md:text-start xl:max-w-[255px]">
           <h2>{title}</h2>
           <p className="text-[#777F98]">{description}</p>
         </section>
@@ -61,10 +61,10 @@ export default function MainRow2() {
   };
 
   return (
-    <ul className="mt-[110px] flex h-[614px] w-full max-w-[573px] flex-col gap-[40px] text-white xl:mt-[202px] xl:h-[383px] xl:max-w-[1110px] xl:flex-row xl:gap-[30px]">
+    <ul className="mt-[110px] flex w-full max-w-[573px] flex-col items-center gap-[40px] text-white md:h-[614px] xl:mt-[202px] xl:h-[383px] xl:max-w-[1110px] xl:flex-row xl:gap-[30px]">
       {listItems.map((item, index) => (
         <MiddleBlock
-          classExtension={index % 2 ? 'xl:self-end self-start' : 'xl:self-start self-end'}
+          classExtension={index % 2 ? 'xl:self-end md:self-start ' : 'xl:self-start md:self-end'}
           key={index}
           title={item.title}
           src={item.src}

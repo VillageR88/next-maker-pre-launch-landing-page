@@ -42,7 +42,7 @@ export default function MainRow3() {
   };
   return (
     <div className="mt-[141px] flex flex-col items-center gap-[72px] text-center xl:mt-[202px]">
-      <section className="flex max-w-[540px] flex-col gap-[27px] xl:gap-[24px]">
+      <section className="flex max-w-[327px] flex-col gap-[27px] md:max-w-[540px] xl:gap-[24px]">
         <h3 className="text-[#FFFFFF]">Our pricing plans</h3>
         <p className="text-[#777F98]">
           We only make money when our creators make money. Our plans are always affordable, and it’s completely free to
