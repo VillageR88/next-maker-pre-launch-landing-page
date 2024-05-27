@@ -10,9 +10,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: 'Contact form',
-  description: 'Contact form',
-  applicationName: 'Contact form',
+  title: 'Maker pre-launch landing page',
+  description: 'Maker pre-launch landing page',
+  applicationName: 'Maker pre-launch landing page',
 } as const;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
